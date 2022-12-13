@@ -1,0 +1,41 @@
+/*
+ * Class: CMSC201 
+ * Instructor:Professor Gringberg
+ * Description: Write a JUnit test class to test the methods length, charAt, substring, and indexOf in the java.lang.String class.
+ * Due: 12/12/2022
+ * I pledge that I have completed the programming assignment independently.
+   I have not copied the code from a student or any source.
+   I have not given my code to any student.
+   Print your Name here: Bryan Orozco
+*/
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class PrimeNumberMethodTest {
+  public static boolean isPrime(int number) {
+    for (int divisor = 2; divisor <= number / 2; divisor++) {
+      if (number % divisor == 0) { // If true, number is not prime
+        return false; // number is not a prime
+      }
+    }
+
+    return true; // number is prime
+  }
+
+  @Test
+  public void testIsPrimeWithPrimeNumber() {
+    int primeNumber = 17;
+    boolean expectedResult = true;
+    boolean actualResult = isPrime(primeNumber);
+    assertEquals(expectedResult, actualResult);
+  }
+
+  @Test
+  public void testIsPrimeWithNonPrimeNumber() {
+    int nonPrimeNumber = 15;
+    boolean expectedResult = false;
+    boolean actualResult = isPrime(nonPrimeNumber);
+    assertEquals(expectedResult, actualResult);
+  }
+}
