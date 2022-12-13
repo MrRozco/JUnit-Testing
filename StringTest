@@ -1,0 +1,47 @@
+/*
+ * Class: CMSC201 
+ * Instructor:Professor Gringberg
+ * Description: Write a JUnit test class to test the methods length, charAt, substring, and indexOf in the java.lang.String class.
+ * Due: 12/12/2022
+ * I pledge that I have completed the programming assignment independently.
+   I have not copied the code from a student or any source.
+   I have not given my code to any student.
+   Print your Name here: Bryan Orozco
+*/
+
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class StringTest {
+  @Test
+  public void testLength() {
+    String str = "Hello, world!";
+    int expectedLength = 13;
+    int actualLength = str.length();
+    assertEquals(expectedLength, actualLength);
+  }
+
+  @Test
+  public void testCharAt() {
+    String str = "Hello, world!";
+    char expectedChar = 'H';
+    char actualChar = str.charAt(0);
+    assertEquals(expectedChar, actualChar);
+  }
+
+  @Test
+  public void testSubstring() {
+    String str = "Hello, world!";
+    String expectedSubstring = "world";
+    String actualSubstring = str.substring(7, 12);
+    assertEquals(expectedSubstring, actualSubstring);
+  }
+
+  @Test
+  public void testIndexOf() {
+    String str = "Hello, world!";
+    int expectedIndex = 7;
+    int actualIndex = str.indexOf("world");
+    assertEquals(expectedIndex, actualIndex);
+  }
+}
